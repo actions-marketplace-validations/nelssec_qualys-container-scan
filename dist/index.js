@@ -30455,6 +30455,9 @@ class QScannerRunner {
         if (this.config.proxy) {
             args.push('--proxy', this.config.proxy);
         }
+        args.push('--max-network-retries', '15');
+        args.push('--network-retry-wait-min', '10s');
+        args.push('--network-retry-wait-max', '2m');
         return args;
     }
     async executeQScanner(args, outputDir) {
