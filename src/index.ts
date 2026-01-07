@@ -69,7 +69,7 @@ async function run(): Promise<void> {
       platform: platform || undefined,
       mode: usePolicyEvaluation ? 'evaluate-policy' : 'get-report',
       scanTypes,
-      format: ['json', 'sarif'],
+      format: ['json'],
       reportFormat: ['sarif', 'json'],
       policyTags: policyTags ? policyTags.split(',').map((t) => t.trim()).filter(Boolean) : undefined,
       timeout: scanTimeout,
